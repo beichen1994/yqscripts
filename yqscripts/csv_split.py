@@ -1,65 +1,18 @@
+
 import sys
 import os
 import csv
-import argparse
-
-"""
-
-Splits a CSV file into multiple files based on command line arguments.
-
-    Arguments:
-
-    `-h`: help file of usage of the script
-    `-i`: input file name
-    `-o`: output file name
-    `-r`: row limit to split
-
-    Default settings:
-
-    `output_path` is the current directory
-    headers are displayed on each split file
-    the default delimeter is a comma
-
-    Example usage:
-
-    ```
-    # split csv by every 100 rows
-    >> python csv_split.py -i input.csv -o output -r 100
-    ```
-
-"""
 
 
-def get_arguments():
-    """Grab user supplied arguments using the argparse library."""
 
-    # Use arparse to get command line arguments
-    parser = argparse.ArgumentParser('split csv')
-    parser.add_argument("-i", "--input_file", required=True,
-                        help="csv input file (with extension)", type=str)
-    parser.add_argument("-o", "--output_file", required=True,
-                        help="csv output file (without extension)", type=str)
-    parser.add_argument("-r", "--row_limit", required=True,
-                        help="row limit to split csv at", type=int)
-    args = parser.parse_args()
-
-    # Check if the input_file exits
-    is_valid_file(parser, args.input_file)
-
-    # Check if the input_file is valid
-    is_valid_csv(parser, args.input_file, args.row_limit)
-
-    return args.input_file, args.output_file, args.row_limit
-
-
-def is_valid_file(parser, file_name):
+def is_valid_file(file_name):
     """Ensure that the input_file exists."""
     if not os.path.exists(file_name):
-        parser.error("The file '{}' does not exist!".format(file_name))
+        print("The file '{}' does not exist!".format(file_name))
         sys.exit(1)
 
 
-def is_valid_csv(parser, file_name, row_limit):
+def is_valid_csv(file_name, row_limit):
     """
     Ensure that the # of rows in the input_file
     is greater than the row_limit.
@@ -71,22 +24,22 @@ def is_valid_csv(parser, file_name, row_limit):
     # and the sum() function to count the rows:
     # row_count = sum(1 for row in csv.reader(open(file_name)))
     if row_limit > row_count:
-        parser.error(
+        print(
             "The 'row_count' of '{}' is > the number of rows in '{}'!"
             .format(row_limit, file_name)
         )
         sys.exit(1)
 
 
-def parse_file(arguments):
+def parse_file(input_file,output_path,output_file,row_limit):
     """
     Splits the CSV into multiple files or chunks based on the row_limit.
     Then create new CSV files.
     """
-    input_file = arguments[0]
-    output_file = arguments[1]
-    row_limit = arguments[2]
-    output_path = '.'  # Current directory
+    is_valid_file(input_file)
+
+    is_valid_csv(input_file,row_limit)
+
 
     # Read CSV, split into list of lists
     with open(input_file, 'r') as input_csv:
@@ -125,10 +78,3 @@ def parse_file(arguments):
             # Create new chunk
             current_chunk += 1
 
-
-def main():
-    arguments = get_arguments()
-    parse_file(arguments)
-
-if __name__ == "__main__":
-    main()

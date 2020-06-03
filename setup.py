@@ -7,7 +7,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = "yqscripts",
-    version = "0.1.0",
+    version = "0.1.13",
     keywords = ("yq scripts"),
     description = "my useful scripts",
     long_description = "my useful scripts",

@@ -1,0 +1,11 @@
+README.md
+setup.py
+yqscripts/__init__.py
+yqscripts/csv_split.py
+yqscripts/csv_wos.py
+yqscripts/pandas_fre.py
+yqscripts.egg-info/PKG-INFO
+yqscripts.egg-info/SOURCES.txt
+yqscripts.egg-info/dependency_links.txt
+yqscripts.egg-info/requires.txt
+yqscripts.egg-info/top_level.txt
