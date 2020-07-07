@@ -51,3 +51,15 @@ def parse_file(input_file,output_path,output_file):
     f.close()
 
 
+
+
+def plain_csv(input_file,output_path,output_file):
+    is_valid_file(input_file)
+    with open(input_file,encoding='utf-8','r') as f1:
+        lines = f1.readlines()
+        pass
+    
+
+
+
+
