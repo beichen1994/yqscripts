@@ -1,0 +1,1 @@
+(TS = ('disruptive technolog*'  OR 'disruptive innovation'))  AND LANGUAGE: (English) AND DOCUMENT TYPES: (Article)

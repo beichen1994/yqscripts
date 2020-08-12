@@ -1,0 +1,78 @@
+TS(Topic)
+主题，包括专利名称和摘要
+AB(Abstract)
+摘要
+EA(Equivalent Abstract)
+等同摘要
+TF(Technology Focus/Extension Abstract)
+技术焦点摘要
+TI(Title)
+专利名称
+AU(Inventor)
+发明人
+PN(Patent Number)
+专利号
+IP(IPC)
+国际专利分类号
+DC(Class Code)
+德温特分类号
+MC(Manual Code)
+手工代码
+GA(PAN)
+德温特入藏登记号
+AN(Assignee Name)
+专利权人名称
+AC(Assignee Code)
+专利权人代码
+AE(Assignee Name+Code)
+专利权人名称或代码
+CP(Citing Patents)
+被引用专利
+CR(Citing Reference)
+被引文献
+CX(CP+Patent Family)
+被引用专利号及专利族
+CA(Cited Assignee)
+被引用专利权人名称或代码
+CN(Cited Assignee Name)
+被引用专利权人名称
+CC(Cited Assignee Code)
+被应用专利权人代码
+CI(Cited Inventor)
+被引用发明人
+CD(Cited PAN)
+被引用德温特人入藏登记号
+PD(Patent Details)
+专利详细信息
+AD(Application Details)
+申请详细些信息和日期
+FD(Further Application Details)
+更多申请详细信息
+PI(Priority Application Information and Date)
+优先权申请信息和日期
+DS(Designated States)
+指定州/国家/地区
+FS(Field of Search)
+检索字段
+DN(Derwent Chemistry Resource number)
+DCR标识号
+MN(Markush number)
+Markush号
+RI(Ring Index Numbers)
+环系索引号
+RG(Derwent Registry Number)
+德温特注册号
+ER(End of record)
+记录结束
+EF(End of File)
+文件结束
+
+
+
+
+
+
+
+
+
+
